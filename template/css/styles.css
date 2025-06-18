@@ -1,0 +1,128 @@
+:root {
+  --color-base: #0D0D0D;
+  --color-accent: #E3B341;
+  --radius-xl: 1rem;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--color-base);
+  color: white;
+}
+
+.c-header {
+  background: var(--color-base);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+.c-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.c-logo {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--color-accent);
+}
+.c-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+.c-nav__list a {
+  color: white;
+  text-decoration: none;
+}
+
+.c-hero {
+  text-align: center;
+  padding: 8rem 2rem;
+  background: linear-gradient(45deg, #0D0D0D, var(--color-accent));
+}
+.c-hero__title {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.c-btn {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.c-btn--primary {
+  background: var(--color-accent);
+  color: #0D0D0D;
+}
+.c-btn--primary:hover {
+  background: #fff;
+}
+.c-btn--secondary {
+  background: transparent;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+}
+.c-btn--secondary:hover {
+  background: var(--color-accent);
+  color: #0D0D0D;
+}
+
+.c-section {
+  padding: 4rem 2rem;
+}
+.c-section__title {
+  font-family: 'Fjalla One', sans-serif;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.c-service-card {
+  background: rgba(255,255,255,0.05);
+  padding: 1.5rem;
+  border-radius: var(--radius-xl);
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.c-footer {
+  text-align: center;
+  padding: 2rem;
+}
+
+.js-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.js-fade.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.js-slide {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.js-slide.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+
+.c-form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.c-form__input {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-xl);
+  border: none;
+}
